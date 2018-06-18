@@ -1,17 +1,85 @@
 .App {
-  text-align: center;
+  padding: 10px 15px;
+  box-sizing: border-box;
+
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 43px;
+	@media(min-width: 1024px) {
+		.App {
+			font-size: 100px;
+		}
+	}
+
+	@media(min-width: 1366px) {
+		.App {
+			font-size: 150px;
+		}
+	}
+
+	@media(min-width: 1660px) {
+		.App {
+			font-size: 175px;
+		}
+	}
+
+	@media(min-width: 1920px) {
+		.App {
+			font-size: 200px;
+		}
+	}
+
+.App > div {
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
 
-.App-header {
-  background-color: rgba(40,42,61,0.95);
-  padding: 20px;
-  color: white;
+.App .red {
+	color: red;
 }
 
-.App-intro {
-  font-size: large;
+.App .App-dataContainer,
+.App .App-timeContainer {
+	height: 50%;
+}
+
+.App .App-dataContainer > span.App-dataLine {
+	display: block;
+	height: 50%;
+	text-align: left;
+}
+
+.App .App-dataContainer > span.App-dataLine > span {
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1.3em;
+	max-width: 85%;
+	overflow: hidden;
+    white-space: nowrap;
+}
+
+.App .App-dataContainer > span.App-dataLine > span.App-id {
+	float: left;
+}
+
+.App .App-dataContainer > span.App-dataLine > span + span {
+	padding-left: 0.25em;
+}
+
+.App .App-timeContainer > span {
+	display:inline-block;
+	font-size: 2em;
+	line-height: 1.4em;
+}
+
+.App .App-timeContainer > span:first-child {
+	float: left;
+}
+
+.App .App-timeContainer > span:last-child {
+	float: right;
 }
